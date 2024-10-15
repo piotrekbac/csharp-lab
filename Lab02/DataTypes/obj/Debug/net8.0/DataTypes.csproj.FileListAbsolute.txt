@@ -1,0 +1,15 @@
+D:\Users\piotr.bacior\Desktop\csharp-lab\Lab02\DataTypes\bin\Debug\net8.0\DataTypes.exe
+D:\Users\piotr.bacior\Desktop\csharp-lab\Lab02\DataTypes\bin\Debug\net8.0\DataTypes.deps.json
+D:\Users\piotr.bacior\Desktop\csharp-lab\Lab02\DataTypes\bin\Debug\net8.0\DataTypes.runtimeconfig.json
+D:\Users\piotr.bacior\Desktop\csharp-lab\Lab02\DataTypes\bin\Debug\net8.0\DataTypes.dll
+D:\Users\piotr.bacior\Desktop\csharp-lab\Lab02\DataTypes\bin\Debug\net8.0\DataTypes.pdb
+D:\Users\piotr.bacior\Desktop\csharp-lab\Lab02\DataTypes\obj\Debug\net8.0\DataTypes.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\piotr.bacior\Desktop\csharp-lab\Lab02\DataTypes\obj\Debug\net8.0\DataTypes.AssemblyInfoInputs.cache
+D:\Users\piotr.bacior\Desktop\csharp-lab\Lab02\DataTypes\obj\Debug\net8.0\DataTypes.AssemblyInfo.cs
+D:\Users\piotr.bacior\Desktop\csharp-lab\Lab02\DataTypes\obj\Debug\net8.0\DataTypes.csproj.CoreCompileInputs.cache
+D:\Users\piotr.bacior\Desktop\csharp-lab\Lab02\DataTypes\obj\Debug\net8.0\DataTypes.sourcelink.json
+D:\Users\piotr.bacior\Desktop\csharp-lab\Lab02\DataTypes\obj\Debug\net8.0\DataTypes.dll
+D:\Users\piotr.bacior\Desktop\csharp-lab\Lab02\DataTypes\obj\Debug\net8.0\refint\DataTypes.dll
+D:\Users\piotr.bacior\Desktop\csharp-lab\Lab02\DataTypes\obj\Debug\net8.0\DataTypes.pdb
+D:\Users\piotr.bacior\Desktop\csharp-lab\Lab02\DataTypes\obj\Debug\net8.0\DataTypes.genruntimeconfig.cache
+D:\Users\piotr.bacior\Desktop\csharp-lab\Lab02\DataTypes\obj\Debug\net8.0\ref\DataTypes.dll
