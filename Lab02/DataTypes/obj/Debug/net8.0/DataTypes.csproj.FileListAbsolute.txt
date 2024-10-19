@@ -13,3 +13,17 @@ D:\Users\piotr.bacior\Desktop\csharp-lab\Lab02\DataTypes\obj\Debug\net8.0\refint
 D:\Users\piotr.bacior\Desktop\csharp-lab\Lab02\DataTypes\obj\Debug\net8.0\DataTypes.pdb
 D:\Users\piotr.bacior\Desktop\csharp-lab\Lab02\DataTypes\obj\Debug\net8.0\DataTypes.genruntimeconfig.cache
 D:\Users\piotr.bacior\Desktop\csharp-lab\Lab02\DataTypes\obj\Debug\net8.0\ref\DataTypes.dll
+C:\Users\Piotr\Desktop\csharp-lab\Lab02\DataTypes\bin\Debug\net8.0\DataTypes.exe
+C:\Users\Piotr\Desktop\csharp-lab\Lab02\DataTypes\bin\Debug\net8.0\DataTypes.deps.json
+C:\Users\Piotr\Desktop\csharp-lab\Lab02\DataTypes\bin\Debug\net8.0\DataTypes.runtimeconfig.json
+C:\Users\Piotr\Desktop\csharp-lab\Lab02\DataTypes\bin\Debug\net8.0\DataTypes.dll
+C:\Users\Piotr\Desktop\csharp-lab\Lab02\DataTypes\bin\Debug\net8.0\DataTypes.pdb
+C:\Users\Piotr\Desktop\csharp-lab\Lab02\DataTypes\obj\Debug\net8.0\DataTypes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Piotr\Desktop\csharp-lab\Lab02\DataTypes\obj\Debug\net8.0\DataTypes.AssemblyInfoInputs.cache
+C:\Users\Piotr\Desktop\csharp-lab\Lab02\DataTypes\obj\Debug\net8.0\DataTypes.AssemblyInfo.cs
+C:\Users\Piotr\Desktop\csharp-lab\Lab02\DataTypes\obj\Debug\net8.0\DataTypes.csproj.CoreCompileInputs.cache
+C:\Users\Piotr\Desktop\csharp-lab\Lab02\DataTypes\obj\Debug\net8.0\DataTypes.dll
+C:\Users\Piotr\Desktop\csharp-lab\Lab02\DataTypes\obj\Debug\net8.0\refint\DataTypes.dll
+C:\Users\Piotr\Desktop\csharp-lab\Lab02\DataTypes\obj\Debug\net8.0\DataTypes.pdb
+C:\Users\Piotr\Desktop\csharp-lab\Lab02\DataTypes\obj\Debug\net8.0\DataTypes.genruntimeconfig.cache
+C:\Users\Piotr\Desktop\csharp-lab\Lab02\DataTypes\obj\Debug\net8.0\ref\DataTypes.dll

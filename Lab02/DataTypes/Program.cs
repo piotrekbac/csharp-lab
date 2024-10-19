@@ -1,15 +1,15 @@
 ﻿/* zadanie 1 */
-using System.Numerics;
+//using System.Numerics;
 
-Console.WriteLine("Zmienne i typy danych");
-byte byteVariable = 50;
-int integralVariable = 300;
-long longVariable = 100000000;
-char charVariable1 = (char)85;
-char charVariable2 = 'a';
-double doubleVariable = 50.0005;
-float floatVariable = 55e11F;
-string stringVariable = "Jak się masz piękny kawalerze?";
+//Console.WriteLine("Zmienne i typy danych");
+//byte byteVariable = 50;
+//int integralVariable = 300;
+//long longVariable = 100000000;
+//char charVariable1 = (char)85;
+//char charVariable2 = 'a';
+//double doubleVariable = 50.0005;
+//float floatVariable = 55e11F;
+//string stringVariable = "Jak się masz piękny kawalerze?";
 
 
 //Wypisywanie w konsoli poszczególnych zmiennych
@@ -98,7 +98,6 @@ string stringVariable = "Jak się masz piękny kawalerze?";
 //Console.WriteLine("Czas w minutach: " + time);
 //Console.WriteLine("Czas w hours: " + time * 60);
 //Console.WriteLine("Czas w secounds: " + time * 3600);
-///* koniec zadania 3 */
 
 /* zadanie 4 */
 //int toIncrement = 3;
@@ -110,19 +109,22 @@ string stringVariable = "Jak się masz piękny kawalerze?";
 
 /* koniec zadania 4 */
 
-Math.Sqrt(9);            // pierwiastek kwadratowy
-Math.Pow(3, 2);           // potęgowanie
-Math.Abs(-10);           // moduł
-Math.Sin(1.57);          // sinus kąta w radianach
-Math.Round(1.5);         // zaokrąglenie do najbliższej wartości całkowitej
-Math.Round(2.5);         // wynik taki jak dla funkcji wyżej   
-Math.Truncate(1.95);     // część całkowita liczby zmiennoprzecinkowej
-Math.Ceiling(1.95);      // najmniejsza liczba całkowita większa lub równa argumentowi
-Math.Floor(1.95);        // największa liczba całkowita mniejsza lub równa argumentowi 
-Math.Clamp(4, 0, 10);   // ograniczenie pierwszego argumentu do zakresu
-Math.Max(2, 6);          // zwraca większy argument
-Math.Min(2, 6);          // zwraca mniejszy argument
-Math.Sign(-2);           // zwraca liczbę określającą znak argumentu: - 1, 0 lub 1
+//using System.Reflection.Metadata.Ecma335;
+
+/////* koniec zadania 3 */
+//Math.Sqrt(9);            // pierwiastek kwadratowy
+//Math.Pow(3, 2);           // potęgowanie
+//Math.Abs(-10);           // moduł
+//Math.Sin(1.57);          // sinus kąta w radianach
+//Math.Round(1.5);         // zaokrąglenie do najbliższej wartości całkowitej
+//Math.Round(2.5);         // wynik taki jak dla funkcji wyżej   
+//Math.Truncate(1.95);     // część całkowita liczby zmiennoprzecinkowej
+//Math.Ceiling(1.95);      // najmniejsza liczba całkowita większa lub równa argumentowi
+//Math.Floor(1.95);        // największa liczba całkowita mniejsza lub równa argumentowi 
+//Math.Clamp(4, 0, 10);   // ograniczenie pierwszego argumentu do zakresu
+//Math.Max(2, 6);          // zwraca większy argument
+//Math.Min(2, 6);          // zwraca mniejszy argument
+//Math.Sign(-2);           // zwraca liczbę określającą znak argumentu: - 1, 0 lub 1
 
 ////Math.PI
 ////Math.E
@@ -185,8 +187,11 @@ Math.Sign(-2);           // zwraca liczbę określającą znak argumentu: - 1, 0
 
 //bool IsGreater = false;
 //bool IsLower = true;
+
 //bool IsLower = !IsGreater; //Negacja NOT 
-//bool IsInRange = IsLower && true; //Iloczyn logidzny AND, koniunkcja 
+
+//bool IsInRange = IsLower && true; //Iloczyn logidzny AND, koniunkcja
+//
 //bool IsEqual = !IsGreater || !IsLower; //Alternatywa AND'a czyli OR 
 
 //PONIŻEJ PRZEDSTAWIONE OPERATORY PORÓWNANIA 
@@ -236,53 +241,130 @@ Math.Sign(-2);           // zwraca liczbę określającą znak argumentu: - 1, 0
 
 //int result = a > b ? a : b;
 
-////ZADANIE 11 
+//ZADANIE 11 
 //int temperature = 22;
 
-////if (temperature > 20)
-////{
-////    Console.WriteLine("Warm");
-////}
-////else
-////{
-////    Console.WriteLine("chilly");
-////}
-
 //string result;
-//result = (temperature > 20) ? "warm" : "chilly";
+//result = (temperature > 20) ? "ciepło" : "zimno";
 //Console.WriteLine(result);
 
 /* zadanie 12 */
-int code = 4;
-int quantity = 11;
-decimal productPrice = 3.5m;
-decimal sellPrice;
+//int code = 16; 
+//int quantity = 80; 
+//decimal productPrice = 3.5m; 
+//decimal sellPrice; 
 
-Console.WriteLine($"Price: {sellPrice}");
+//// Obliczanie ceny sprzedaży w zależności od kodu
+//if (code < 10)
+//{
+//    sellPrice = productPrice; // Cena taka sama jak productPrice
+//}
+//else if (code >= 10 && code <= 15)
+//{
+//    sellPrice = productPrice * 0.95m; // Cena o 5% mniejsza niż w productPrice
+//}
+//else
+//{
+//    // Cena zależna od quantity
+//    if (quantity <= 10)
+//    {
+//        sellPrice = productPrice * 1.05m; // Cena o 5% wyższa
+//    }
+//    else if (quantity <= 20)
+//    {
+//        sellPrice = productPrice; // Cena równa productPrice
+//    }
+//    else if (quantity < 100)
+//    {
+//        // Zmniejszenie ceny o 1% za każdą pełną wielokrotność 10
+//        int discountPercentage = (quantity / 10) - 2; // -2, ponieważ dla 20 już zrobiliśmy 0% zniżki
+//        sellPrice = productPrice * (1 - (discountPercentage * 0.01m));
+//    }
+//    else
+//    {
+//        sellPrice = productPrice * 0.90m; // Cena o 10% niższa
+//    }
+//}
 
-if (code < 10)
-{
-    Console.WriteLine(sellPrice);
-}
-else (code > 10 
-}
-
-
-
-
+//Console.WriteLine($"Price: {sellPrice}");
 /* koniec zadania 12 */
 
 
 
 /* zadanie 13 */
-char hexNum = 'E';
+char hexNum = 'a';
 
 switch (hexNum)
 {
     case '0':
         Console.WriteLine($"Decimal number: 0");
         break;
-    // ...
+
+    case '1':
+        Console.WriteLine($"Decimal number: 1");
+        break;
+
+    case '2':
+        Console.WriteLine($"Decimal number: 2");
+        break;
+
+    case '3':
+        Console.WriteLine($"Decimal number: 3");
+        break;
+
+    case '4':
+        Console.WriteLine($"Decimal number: 4");
+        break;
+
+    case '5':
+        Console.WriteLine($"Decimal number: 5");
+        break;
+
+    case '6':
+        Console.WriteLine($"Decimal number: 6");
+        break;
+
+    case '7':
+        Console.WriteLine($"Decimal number: 7");
+        break;
+
+    case '8':
+        Console.WriteLine($"Decimal number: 8");
+        break;
+
+    case '9':
+        Console.WriteLine($"Decimal number: 9");
+        break;
+
+    case 'A':
+    case 'a':
+        Console.WriteLine($"Decimal number: 10");
+        break;
+
+    case 'B':
+    case 'b':
+        Console.WriteLine($"Decimal number: 11");
+        break;
+
+    case 'C':
+    case 'c':
+        Console.WriteLine($"Decimal number: 12");
+        break;
+
+    case 'D':
+    case 'd':
+        Console.WriteLine($"Decimal number: 13");
+        break;
+
+    case 'E':
+    case 'e':
+        Console.WriteLine($"Decimal number: 14");
+        break;
+
+    case 'F':
+    case 'f':
+        Console.WriteLine($"Decimal number: 15");
+        break;
 
     default:
         Console.WriteLine($"Not a valid hexadecimal number!");
