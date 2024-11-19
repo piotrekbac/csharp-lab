@@ -1,0 +1,4 @@
+D:\Users\piotr.bacior\Desktop\Sprawdzian c#\Sprawdzian c#\Sprawdzian c#\obj\Debug\net8.0\Sprawdzian c#.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\piotr.bacior\Desktop\Sprawdzian c#\Sprawdzian c#\Sprawdzian c#\obj\Debug\net8.0\Sprawdzian c#.AssemblyInfoInputs.cache
+D:\Users\piotr.bacior\Desktop\Sprawdzian c#\Sprawdzian c#\Sprawdzian c#\obj\Debug\net8.0\Sprawdzian c#.AssemblyInfo.cs
+D:\Users\piotr.bacior\Desktop\Sprawdzian c#\Sprawdzian c#\Sprawdzian c#\obj\Debug\net8.0\Sprawdzian c#.csproj.CoreCompileInputs.cache
