@@ -1,0 +1,14 @@
+C:\Users\Piotr\Desktop\powtórka ćwiczeń\Powtórka ćwiczeń 2\Powtórka ćwiczeń 2\bin\Debug\net8.0\Powtórka ćwiczeń 2.exe
+C:\Users\Piotr\Desktop\powtórka ćwiczeń\Powtórka ćwiczeń 2\Powtórka ćwiczeń 2\bin\Debug\net8.0\Powtórka ćwiczeń 2.deps.json
+C:\Users\Piotr\Desktop\powtórka ćwiczeń\Powtórka ćwiczeń 2\Powtórka ćwiczeń 2\bin\Debug\net8.0\Powtórka ćwiczeń 2.runtimeconfig.json
+C:\Users\Piotr\Desktop\powtórka ćwiczeń\Powtórka ćwiczeń 2\Powtórka ćwiczeń 2\bin\Debug\net8.0\Powtórka ćwiczeń 2.dll
+C:\Users\Piotr\Desktop\powtórka ćwiczeń\Powtórka ćwiczeń 2\Powtórka ćwiczeń 2\bin\Debug\net8.0\Powtórka ćwiczeń 2.pdb
+C:\Users\Piotr\Desktop\powtórka ćwiczeń\Powtórka ćwiczeń 2\Powtórka ćwiczeń 2\obj\Debug\net8.0\Powtórka ćwiczeń 2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Piotr\Desktop\powtórka ćwiczeń\Powtórka ćwiczeń 2\Powtórka ćwiczeń 2\obj\Debug\net8.0\Powtórka ćwiczeń 2.AssemblyInfoInputs.cache
+C:\Users\Piotr\Desktop\powtórka ćwiczeń\Powtórka ćwiczeń 2\Powtórka ćwiczeń 2\obj\Debug\net8.0\Powtórka ćwiczeń 2.AssemblyInfo.cs
+C:\Users\Piotr\Desktop\powtórka ćwiczeń\Powtórka ćwiczeń 2\Powtórka ćwiczeń 2\obj\Debug\net8.0\Powtórka ćwiczeń 2.csproj.CoreCompileInputs.cache
+C:\Users\Piotr\Desktop\powtórka ćwiczeń\Powtórka ćwiczeń 2\Powtórka ćwiczeń 2\obj\Debug\net8.0\Powtórka ćwiczeń 2.dll
+C:\Users\Piotr\Desktop\powtórka ćwiczeń\Powtórka ćwiczeń 2\Powtórka ćwiczeń 2\obj\Debug\net8.0\refint\Powtórka ćwiczeń 2.dll
+C:\Users\Piotr\Desktop\powtórka ćwiczeń\Powtórka ćwiczeń 2\Powtórka ćwiczeń 2\obj\Debug\net8.0\Powtórka ćwiczeń 2.pdb
+C:\Users\Piotr\Desktop\powtórka ćwiczeń\Powtórka ćwiczeń 2\Powtórka ćwiczeń 2\obj\Debug\net8.0\Powtórka ćwiczeń 2.genruntimeconfig.cache
+C:\Users\Piotr\Desktop\powtórka ćwiczeń\Powtórka ćwiczeń 2\Powtórka ćwiczeń 2\obj\Debug\net8.0\ref\Powtórka ćwiczeń 2.dll
