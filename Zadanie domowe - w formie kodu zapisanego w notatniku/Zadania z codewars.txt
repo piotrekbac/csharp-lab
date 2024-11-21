@@ -1,0 +1,161 @@
+//Zad 1
+
+using System;
+
+public static class Kata
+{
+  public static int MakeNegative(int number)
+  {
+    return number > 0 ? -number : number;
+    return 0;
+  }
+}
+
+//Koniec zad 1 
+
+//Zad 2 
+
+public class Kata 
+{
+    public static int FindSmallestInt(int[] args) 
+    {
+        int smallest = args[0];
+      foreach (int number in args)
+        {
+          if (number < smallest)
+            {
+                smallest = number;
+            }
+        }
+      return smallest;
+    }
+}
+
+//Koniec zad 2 
+
+//Zad 3 
+
+public static class Kata
+{
+  public static int ArrayPlusArray(int[] arr1, int[] arr2)
+  {
+     int sum = 0;
+    foreach (int num in arr1)
+      {
+        sum += num;
+      }
+    foreach (int num in arr2)
+      {
+        sum += num;
+      }
+    return sum;
+  }
+}
+
+//Koniec zad 3
+
+//Zad 4 
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+public class Kata
+{
+    public static int[] CountPositivesSumNegatives(int[] input)
+    {
+        if (input == null || input.Length == 0)
+          {
+            return new int[] { };
+          }
+      
+      int PositiveCount = 0;
+      int NegativeSum = 0;
+      
+          foreach (int num in input)
+            {
+              if (num > 0)
+                {
+                  PositiveCount++;
+                }
+              else if (num < 0)
+                {
+                  NegativeSum += num;
+                }
+            }
+      return new int[] {PositiveCount, NegativeSum};
+    }
+}
+
+//Koniec zad 4 
+
+//Zad 5 
+
+public class Kata {
+  public static int[] Between(int a, int b) {
+    
+    int[] result = new int[b-a+1];
+    
+    for (int i = 0; i < result.Length; i++)
+      {
+        result[i] = a + i;
+      }
+    return result;
+  }
+}
+
+//Koniec zad 5 
+
+//Zad 6 
+
+using System;
+using System.Linq;
+
+public static class Kata
+{
+  public static int[] TwoHighest(int[] arr)
+  {
+    return arr.Distinct()
+      .OrderByDescending (x => x)
+      .Take(2)
+      .ToArray();
+  }
+}
+
+//Koniec zad 6 
+
+//Zad 7 
+
+public class Kata
+{
+  public static string DrawStairs(int n)
+  {
+    string[] stairs = new string[n];
+    
+    for(int i = 0; i < n; i++)
+      {
+        stairs[i] = new string(' ', i) + "I"; 
+      }
+    return string.Join("\n", stairs);
+  }
+}
+
+//Koniec zad 7 
+
+//Zad 8 
+
+public class MathCheck {
+    public static int AreaOrPerimeter(int l, int w) {
+       
+      if (l == w)
+        {
+          return l * w;         
+        }
+      else 
+        {
+          return 2 * (l + w);        
+        }
+    }
+}
+
+//Koniec zad 8 
