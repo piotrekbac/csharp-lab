@@ -1,0 +1,14 @@
+D:\Users\piotr.bacior\Desktop\laby05\Laby05\Laby05\bin\Debug\net8.0\Laby05.exe
+D:\Users\piotr.bacior\Desktop\laby05\Laby05\Laby05\bin\Debug\net8.0\Laby05.deps.json
+D:\Users\piotr.bacior\Desktop\laby05\Laby05\Laby05\bin\Debug\net8.0\Laby05.runtimeconfig.json
+D:\Users\piotr.bacior\Desktop\laby05\Laby05\Laby05\bin\Debug\net8.0\Laby05.dll
+D:\Users\piotr.bacior\Desktop\laby05\Laby05\Laby05\bin\Debug\net8.0\Laby05.pdb
+D:\Users\piotr.bacior\Desktop\laby05\Laby05\Laby05\obj\Debug\net8.0\Laby05.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\piotr.bacior\Desktop\laby05\Laby05\Laby05\obj\Debug\net8.0\Laby05.AssemblyInfoInputs.cache
+D:\Users\piotr.bacior\Desktop\laby05\Laby05\Laby05\obj\Debug\net8.0\Laby05.AssemblyInfo.cs
+D:\Users\piotr.bacior\Desktop\laby05\Laby05\Laby05\obj\Debug\net8.0\Laby05.csproj.CoreCompileInputs.cache
+D:\Users\piotr.bacior\Desktop\laby05\Laby05\Laby05\obj\Debug\net8.0\Laby05.dll
+D:\Users\piotr.bacior\Desktop\laby05\Laby05\Laby05\obj\Debug\net8.0\refint\Laby05.dll
+D:\Users\piotr.bacior\Desktop\laby05\Laby05\Laby05\obj\Debug\net8.0\Laby05.pdb
+D:\Users\piotr.bacior\Desktop\laby05\Laby05\Laby05\obj\Debug\net8.0\Laby05.genruntimeconfig.cache
+D:\Users\piotr.bacior\Desktop\laby05\Laby05\Laby05\obj\Debug\net8.0\ref\Laby05.dll
