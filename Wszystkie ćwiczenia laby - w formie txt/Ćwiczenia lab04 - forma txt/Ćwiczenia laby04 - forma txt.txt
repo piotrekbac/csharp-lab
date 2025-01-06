@@ -1,0 +1,172 @@
+using System;
+
+class Program
+{
+    /* zadanie 1 */
+    static double QuadraticEquation(double x = 0.0, double a = 1.0, double b = 1.0, double c = 1.0)
+    {
+        return a * x * x + b * x + c;
+    }
+    /* koniec zadania 1 */
+
+    /* zadanie 2 */
+    static void Swap(ref double a, ref double b)
+    {
+        double temp = a;
+        a = b;
+        b = temp;
+    }
+    /* koniec zadania 2 */
+
+    /* zadanie 3 */
+    static double Multiply(double a, double b)
+    {
+        return a * b;
+    }
+
+    static double Multiply(double a, double b, double c)
+    {
+        return a * b * c;
+    }
+
+    static double Multiply(params double[] numbers)
+    {
+        double result = 1;
+        foreach (double number in numbers)
+        {
+            result *= number;
+        }
+        return result;
+    }
+    /* konice zadania 3 */
+
+    /* zadanie 4 */
+    enum DayOfTheWeek
+    {
+        Monday = 1,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday,
+        Sunday
+    }
+
+    static void PrintDayInfo(DayOfTheWeek day)
+    {
+        string dayType = day == DayOfTheWeek.Saturday || day == DayOfTheWeek.Sunday ? "Weekend" : "Weekday";
+        Console.WriteLine($"Day: {day}, Number: {(int)day}, Type: {dayType}");
+    }
+    /* koniec zadania 4 */
+
+    /* zadanie 5 */
+    static string FormatDateTime(DateTime dateTime)
+    {
+        return $"{dateTime:dd...MM...yyyy...HH:mm:ss...dddd}";
+    }
+    /* koniec zadania 5 */
+
+    /* zadanie 6 */
+    static double SafeDivide(double dividend, double divisor)
+    {
+        try
+        {
+            return dividend / divisor;
+        }
+        catch (DivideByZeroException)
+        {
+            return 0;
+        }
+    }
+    /* koniec zadania 6 */
+
+    /* zadanie 7 */
+    static void SetYourNewPassword(string password)
+    {
+        if (string.IsNullOrEmpty(password))
+            throw new ArgumentException("Password cannot be empty.");
+
+        if (password.Length < 10 ||
+            !password.Any(char.IsUpper) ||
+            !password.Any(char.IsLower) ||
+            !password.Any(char.IsDigit) ||
+            !password.Any(c => !char.IsLetterOrDigit(c)))
+        {
+            throw new FormatException("Password must contain at least 10 characters, including an uppercase letter, a lowercase letter, a digit, and a special character.");
+        }
+    }
+
+    // Funkcja wywołująca SetYourNewPassword z obsługą wyjątków
+    static void TrySetYourNewPassword(string password)
+    {
+        try
+        {
+            SetYourNewPassword(password);
+            Console.WriteLine("Password set successfully.");
+        }
+        catch (ArgumentException ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+        catch (FormatException ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+    /* koniec zadania 7 */
+
+    static void Main()
+    {
+        /* zadanie 1 */ 
+        Console.WriteLine("Zadanie 1:");
+        double result = QuadraticEquation(2);
+        Console.WriteLine($"Quadratic Equation Result: {result}");
+        Console.WriteLine();
+        /* koniec zadania 1 */
+
+        /* zadanie 2 */
+        Console.WriteLine("Zadanie 2:");
+        double x = 10;
+        double y = 20;
+        Swap(ref x, ref y);
+        Console.WriteLine($"x = {x}, y = {y}");
+        Console.WriteLine();
+        /* koniec zadania 2 */
+
+        /* zadanie 3 */ 
+        Console.WriteLine("Zadanie 3:");
+        Console.WriteLine($"Multiply (2 params): {Multiply(2.0, 3.0)}");
+        Console.WriteLine($"Multiply (3 params): {Multiply(2.0, 3.0, 4.0)}");
+        Console.WriteLine($"Multiply (array): {Multiply(2.0, 3.0, 4.0, 5.0)}");
+        Console.WriteLine(  );
+        /* koniec zadania 3 */
+
+        /* zadanie 4 */
+        Console.WriteLine("Zadanie 4:");
+        PrintDayInfo(DayOfTheWeek.Monday);
+        PrintDayInfo(DayOfTheWeek.Saturday);
+        Console.WriteLine();
+        /* koniec zadania 4 */
+
+        /* zadanie 5 */
+        Console.WriteLine("Zadanie 5:");
+        DateTime now = DateTime.Now;
+        Console.WriteLine(FormatDateTime(now));
+        Console.WriteLine();
+        /* koniec zadania 5 */
+
+        /* zadanie 6 */ 
+        Console.WriteLine("Zadanie 6:");
+        double divResult = SafeDivide(10, 0);
+        Console.WriteLine($"SafeDivide Result: {divResult}");
+        Console.WriteLine();
+        /* koniec zadania 6 */
+
+        /* zadanie 7 */
+        Console.WriteLine("Zadanie 7:");
+        TrySetYourNewPassword("Password123!");
+        TrySetYourNewPassword("pass");
+        Console.WriteLine();
+        /* koniec zadania 7*/
+    }
+}

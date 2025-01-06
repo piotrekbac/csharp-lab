@@ -1,0 +1,156 @@
+using System;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Rozpoczynam sprawdzian");
+            Zadanie_5_6();
+            Console.WriteLine("Kończę sprawdzian.");
+        }
+
+        static void Zadanie_1()
+        {
+            Console.WriteLine("Rozpoczynam zadanie 1");
+            int a = 11;
+            int b = 123;
+
+            // Wypisz liczby podzielne przez 3 od największej do najmniejszej
+            for (int i = b; i >= a; i--)
+            {
+                if (i % 3 == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+
+            Console.WriteLine("Kończę zadanie 1");
+        }
+
+        static void PrintTriangle(int n)
+        {
+            // Rysuj trójkąt o wysokości n
+            static void PrintTriangle(int n)
+            {
+                // Rysuj trójkąt o wysokości n
+                for (int i = 1; i <= n; i++)
+                {
+                    // Wypisz odpowiednią liczbę spacji i znaków $
+                    for (int j = 0; j < n - i; j++)
+                    {
+                        Console.Write(" ");
+                    }
+                    for (int j = 0; j < 2 * i - 1; j++)
+                    {
+                        Console.Write("$");
+                    }
+                    Console.WriteLine();
+                }
+            }
+        }
+
+        static void Zadanie_2()
+        {
+            Console.WriteLine("Rozpoczynam zadanie 2");
+            // Rysuj trójkąt o wysokości 10
+            PrintTriangle(10);
+            Console.WriteLine("Kończę zadanie 2");
+        }
+
+        static void Zadanie_3()
+        {
+            Console.WriteLine("Rozpoczynam zadanie 3");
+            DateTime today = DateTime.Now;
+
+            // Wybierz odpowiednią wiadomość w zależności od godziny
+            string greeting = today.Hour < 12 ? "Dzień dobry" : "Dobry wieczór";
+            string finalText = $"{greeting}, dzisiaj {today.DayOfWeek}, czyli {((int)today.DayOfWeek == 0 ? 7 : (int)today.DayOfWeek)} dzień tygodnia";
+
+            Console.WriteLine(finalText);
+            Console.WriteLine("Kończę zadanie 3");
+        }
+
+        static double FindMaxAbsoluteValue(double[] numbers)
+        {
+            double maxAbsValue = 0;
+
+            // Znajdź liczbę najbardziej oddaloną od 0
+            foreach (double number in numbers)
+            {
+                if (Math.Abs(number) > Math.Abs(maxAbsValue))
+                {
+                    maxAbsValue = number;
+                }
+            }
+
+            return maxAbsValue;
+        }
+
+        static void Zadanie_4()
+        {
+            Console.WriteLine("Rozpoczynam zadanie 4");
+            double[] numbers = { 1.5, -2.22, 4.56, -7, 8.01, 0.0 };
+
+            // Wypisz maksymalną wartość bezwzględną
+            Console.WriteLine("The MAX value = " + FindMaxAbsoluteValue(numbers));
+            Console.WriteLine("Kończę zadanie 4");
+        }
+
+        static void Zadanie_5_6()
+        {
+            // Rozpoczynamy pętlę
+            while (true)
+            {
+                Console.WriteLine("Podaj numer zadania od 1 do 4, które mam wyświetlić (lub 0, aby zakończyć).");
+
+                int zadanieNumer = 0;
+
+                // Wczytaj numer zadania od użytkownika
+                while (true)
+                {
+                    string input = Console.ReadLine();
+
+                    try
+                    {
+                        zadanieNumer = int.Parse(input);
+                        break;
+                    }
+                    catch (FormatException)
+                    {
+                        Console.WriteLine("Nieprawidłowy format. Podaj liczbę całkowitą.");
+                    }
+                }
+
+                // Zakończ pętlę, jeśli użytkownik poda 0
+                if (zadanieNumer == 0)
+                {
+                    break;
+                }
+
+                // Wykonaj odpowiednie zadanie
+                switch (zadanieNumer)
+                {
+                    case 1:
+                        Zadanie_1();
+                        break;
+                    case 2:
+                        Zadanie_2();
+                        break;
+                    case 3:
+                        Zadanie_3();
+                        break;
+                    case 4:
+                        Zadanie_4();
+                        break;
+                    default:
+                        Console.WriteLine("Nie ma takiego zadania, wybierz ponownie.");
+                        break;
+                }
+            }
+
+            Console.WriteLine("Kończę pętlę.");
+        }
+    }
+}

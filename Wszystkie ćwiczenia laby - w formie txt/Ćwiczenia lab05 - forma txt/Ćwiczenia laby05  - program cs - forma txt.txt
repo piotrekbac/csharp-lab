@@ -1,0 +1,143 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using ConsoleApp1;
+
+public struct Coords
+{
+    public double X { get; }
+    public double Y { get; }
+
+    public Coords(double x, double y)
+    {
+        X = x;
+        Y = y;
+    }
+
+    public override string ToString()
+    {
+        return $"({X}, {Y})";
+    }
+
+    public override bool Equals(object obj)
+    {
+        if (obj is Coords)
+        {
+            var other = (Coords)obj;
+            return X == other.X && Y == other.Y;
+        }
+        return false;
+    }
+
+    public override int GetHashCode()
+    {
+        return X.GetHashCode() ^ Y.GetHashCode();
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Coords point1 = new Coords(1.0, 1.0);
+        Console.WriteLine(point1);
+
+        Coords point2 = new Coords(1.0, 1.0);
+
+        if (point1.Equals(point2))
+            Console.WriteLine("Equal structs");
+        else
+            Console.WriteLine("Different structs");
+
+        point1 = new Coords(1.0, 1.0);
+        point2 = new Coords(2.0, 2.0);
+        Console.WriteLine($"Line start=({point1.X},{point1.Y})  Line end=({point2.X},{point2.Y})");
+
+        /* zadanie 1 */
+
+        List<Coords> punkty = new List<Coords>();
+        Console.WriteLine("Podaj liczbe punktów: ");
+        int n = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Podaj współrzędne punktów (x y): ");
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine($"Punkt {i + 1} (x y): ");
+            string[] wspolrzedne = Console.ReadLine().Split();
+            double x = double.Parse(wspolrzedne[0]);
+            double y = double.Parse(wspolrzedne[1]);
+
+            punkty.Add(new Coords(x, y));
+        }
+
+        double dlugosc = DlugoscLamanej(punkty);
+        Console.WriteLine($"Długość łamanej: {dlugosc:F2}");
+
+        /* koniec zadania 1 */
+
+        /* zadanie 2 */
+
+        int[] liczby = { 12, 7, 25, 4, -3, 9, 15 };
+        var wynik = ZnajdzMinMax(liczby);
+
+        Console.WriteLine($"Najmniejsza liczba: {wynik.Item1}");
+        Console.WriteLine($"Największa liczba: {wynik.Item2}");
+
+        /* koniec zadania 2 */
+
+        /* zadanie 3 */
+
+        var person1 = new Person("Jan", "Kowalski", new DateTime(2000, 5, 15));
+        person1.EmailAddress = "jan.kowalski@example.com";
+
+        var person2 = new Person("Anna", "Nowak", new DateTime(2010, 7, 22));
+        person2.EmailAddress = "anna.nowak@example.com";
+
+        Console.WriteLine($"Imię i nazwisko: {person1.GetFullName()}");
+        Console.WriteLine($"Email: {person1.EmailAddress}");
+        Console.WriteLine($"Wiek: {person1.GetAge()}");
+        Console.WriteLine($"Pełnoletni: {person1.IsAdult()}");
+
+        Console.WriteLine();
+
+        Console.WriteLine($"Imię i nazwisko: {person2.GetFullName()}");
+        Console.WriteLine($"Email: {person2.EmailAddress}");
+        Console.WriteLine($"Wiek: {person2.GetAge()}");
+        Console.WriteLine($"Pełnoletni: {person2.IsAdult()}");
+
+        /* koniec zadania 3 */
+    }
+    /* zadanie 1 - funkcja */
+    static double DlugoscLamanej(List<Coords> punkty)
+    {
+        double sumaOdleglosci = 0.0;
+        for (int i = 1; i < punkty.Count; i++)
+        {
+            sumaOdleglosci += Odleglosc(punkty[i - 1], punkty[i]);
+        }
+        return sumaOdleglosci;
+    }
+
+    static double Odleglosc(Coords p1, Coords p2)
+    {
+        return Math.Sqrt(Math.Pow(p2.X - p1.X, 2) + Math.Pow(p2.Y - p1.Y, 2));
+    }
+
+    /* zadanie 1 - funkcja*/
+
+    /* zadanie 2 - funkcja */
+    public static (int, int) ZnajdzMinMax(int[] liczby)
+    {
+        if (liczby == null || liczby.Length == 0)
+        {
+            throw new ArgumentException("Tablica nie może być pusta");
+        }
+
+        int min = liczby.Min();
+        int max = liczby.Max();
+        return (min, max);
+    }
+    /* zadanie 2 - funkcja */
+}

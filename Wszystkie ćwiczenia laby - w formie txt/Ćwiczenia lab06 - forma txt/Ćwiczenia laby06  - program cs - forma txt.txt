@@ -1,0 +1,117 @@
+using System;
+using x5;
+// Define the Person class with necessary properties and methods
+public class Person
+{
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public Person Partner { get; set; }
+    public Animal Pet { get; set; }
+    public Appearance Appearance { get; set; }
+
+    public Person(string firstName, string lastName)
+    {
+        FirstName = firstName;
+        LastName = lastName;
+    }
+
+    public string GetFullName()
+    {
+        return $"{FirstName} {LastName}";
+    }
+
+    public void AdoptAPet(Animal pet)
+    {
+        Pet = pet;
+    }
+
+    public static void Relate(Person person1, Person person2)
+    {
+        person1.Partner = person2;
+        person2.Partner = person1;
+    }
+}
+
+// Define the Animal class
+public class Animal
+{
+    public string Name { get; set; }
+    public string Species { get; set; }
+
+    public Animal(string name, string species)
+    {
+        Name = name;
+        Species = species;
+    }
+}
+
+// Define the Appearance class
+public class Appearance
+{
+    public string EyesColor { get; set; }
+    public string HairColor { get; set; }
+    public bool HasFreckles { get; set; }
+
+    public Appearance(string eyesColor, string hairColor, bool hasFreckles)
+    {
+        EyesColor = eyesColor;
+        HairColor = hairColor;
+        HasFreckles = hasFreckles;
+    }
+}
+
+// Zadanie 1
+
+//class Program1
+//{
+//    static void Main(string[] args)
+//    {
+//        Person person1 = new Person("Jaś", "Fasola");
+//        Person person2 = new Person("Marek", "Pietrucha");
+
+//        Console.WriteLine($"{person1.GetFullName()} jest partnerem z {(person1.Partner == null ? "nikt" : person1.Partner.GetFullName())}");
+//        Console.WriteLine($"{person2.GetFullName()} jest partnerem z {(person2.Partner == null ? "nikt" : person2.Partner.GetFullName())}");
+//        Person.Relate(person1, person2);
+//        Console.WriteLine("\nPo relacji:");
+//        Console.WriteLine($"{person1.GetFullName()} jest w relacji z {person1.Partner.GetFullName()}");
+//        Console.WriteLine($"{person2.GetFullName()} jest w relacji z {person2.Partner.GetFullName()}");
+//    }
+//}
+
+// koniec zadania 1 
+
+// Zadanie 2
+
+//class Program2
+//{
+//    static void Main(string[] args)
+//    {
+//        Person person1 = new Person("Jaś", "Fasola");
+//        Animal pet = new Animal("Garfield", "Kot");
+//        Console.WriteLine($"{person1.GetFullName()} nie ma póki co zwierzaka");
+//        person1.AdoptAPet(pet);
+//        Console.WriteLine($"{person1.GetFullName()} adoptował zwierzaka");
+//        Console.WriteLine($"Imię zwierzaka: {person1.Pet.Name}, Specjał: {person1.Pet.Species}");
+//    }
+//}
+
+// koniec zadania 2 
+
+// Zadanie 3
+
+class Program3
+{
+    static void Main(string[] args)
+    {
+        Person person1 = new Person("Jaś", "Fasola");
+        Appearance joinAppearance = new Appearance("Blue", "Brown", true);
+        person1.Appearance = joinAppearance;
+
+        Console.WriteLine($"{person1.GetFullName()}'s appearance:");
+        Console.WriteLine($"Eyes color: {person1.Appearance.EyesColor}");
+        Console.WriteLine($"Hair color: {person1.Appearance.HairColor}");
+        Console.WriteLine($"Has Freckles: {person1.Appearance.HasFreckles}");
+    }
+}
+
+// koniec zadania 3 

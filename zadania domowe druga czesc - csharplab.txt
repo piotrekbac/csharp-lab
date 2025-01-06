@@ -1,0 +1,263 @@
+//zadanie 1 
+
+public class Person
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+
+    public Person(string name, int age)
+    {
+        Name = name;
+        Age = age;
+    }
+
+    public string Info
+    {
+        get
+        {
+            return $"{Name}s age is {Age}";
+        }
+    }
+
+    public string getInfo()
+    {
+        return Info;
+    }
+}
+
+
+//koniec zadania 1 
+
+//zadanie 2 
+
+public class Shark : Animal
+{
+    public Shark(string name, int age, string status)
+        : base(name, age, 0, "shark", status)
+    {
+    }
+}
+
+public class Cat : Animal
+{
+    public Cat(string name, int age, string status)
+        : base(name, age, 4, "cat", status)
+    {
+    }
+
+    public override string Introduce()
+    {
+        return base.Introduce() + "  Meow meow!";
+    }
+}
+
+public class Dog : Animal
+{
+    public string Master { get; private set; }
+
+    public Dog(string name, int age, string status, string master)
+        : base(name, age, 4, "dog", status)
+    {
+        this.Master = master;
+    }
+
+    public string GreetMaster()
+    {
+        return $"Hello {this.Master}";
+    }
+}
+
+//koniec zadania 2 
+
+//zadanie 3 
+
+  using System;
+   public class Kata
+    {
+        private readonly Status _status;
+
+        public Kata()
+        {
+        }
+
+        public Kata(Status status)
+        {
+            _status = status;
+        }
+
+        public string GetStatusDescription()
+        {
+          return _status?.GetStatusDescription() ?? "I have never been set";
+        }
+    }
+    
+
+    public class NewStatus : Status
+    {
+        public override string GetStatusDescription()
+        {
+            return "I am new!";
+        }
+    }
+    public class ActiveStatus : Status
+    {
+        public override string GetStatusDescription()
+        {
+            return "I am active";
+        }
+    }
+    public class DeactivatedStatus : Status
+    {
+        public override string GetStatusDescription()
+        {
+            return "I have been deactivated";
+        }
+    }
+
+//koniec zadania 3 
+
+//zadanie 4 
+
+using System.Collections;
+using System.Collections.Generic;
+
+public class Loop<T>: IEnumerable<T>
+{
+    LinkedList<T> loop = new LinkedList<T>();
+
+    public IEnumerator<T> GetEnumerator()
+    {
+        return loop.GetEnumerator();
+    }
+
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return this.GetEnumerator();
+    }
+
+    public void Add(T item)
+    {
+        loop.AddLast(item);
+    }
+
+    public void Left()
+    {
+        LinkedListNode<T> first = loop.First;
+        
+        loop.RemoveFirst();
+        
+        loop.AddLast(first);
+        
+    }
+
+    public void Rigth()
+    {
+        LinkedListNode<T> last = loop.Last;
+    
+        loop.RemoveLast();
+        
+        loop.AddFirst(last);
+    }
+
+    public T PopOut()
+    {
+        T first = loop.First.Value;
+
+        loop.RemoveFirst();
+
+        return first;
+    }
+
+    public T ShowFirst()
+    {
+        return loop.First.Value;
+    }
+ }
+
+//koniec zadania 4 
+
+//zadanie 5 
+
+using System;
+using System.Collections.Generic;
+
+public class ListFilterer
+{
+    public static List<int> GetIntegersFromList(List<object> list)
+    {
+        List<int> result = new List<int>();
+
+        foreach (var item in list)
+        {
+            if (item is int)
+            {
+                result.Add((int)item);
+            }
+        }
+
+        return result;
+    }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        var test1 = new List<object>(){1, 2, "a", "b"};
+        var result1 = ListFilterer.GetIntegersFromList(test1);
+        Console.WriteLine(string.Join(", ", result1)); // Output: 1, 2
+
+        var test2 = new List<object>(){1, "a", "b", 0, 15};
+        var result2 = ListFilterer.GetIntegersFromList(test2);
+        Console.WriteLine(string.Join(", ", result2)); // Output: 1, 0, 15
+
+        var test3 = new List<object>(){1, 2, "a", "b", "aasf", "1", "123", 123};
+        var result3 = ListFilterer.GetIntegersFromList(test3);
+        Console.WriteLine(string.Join(", ", result3)); // Output: 1, 2, 123
+    }
+}
+
+//koniec zadania 5 
+
+//zadanie 6 
+
+using System;
+using System.Collections.Generic;
+
+public class AddMore
+{
+    public static List<int> AddExtra(List<int> listOfNumbers)
+    {
+        List<int> newList = new List<int>(listOfNumbers);
+        
+        newList.Add(13);
+        
+        return newList;
+    }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        List<int> originalList = new List<int> { 1, 2, 3 };
+        List<int> modifiedList = AddMore.AddExtra(originalList);
+        
+        Console.WriteLine("Original List:");
+        foreach (int item in originalList)
+        {
+            Console.WriteLine(item);
+        }
+        
+        Console.WriteLine("Modified List:");
+        foreach (int item in modifiedList)
+        {
+            Console.WriteLine(item);
+        }
+        
+        Console.WriteLine("Original List Count: " + originalList.Count);
+        Console.WriteLine("Modified List Count: " + modifiedList.Count);
+    }
+}
+
+//koniec zadania 6 

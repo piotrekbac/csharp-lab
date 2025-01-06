@@ -1,0 +1,205 @@
+using System;
+
+// Interfejs IWalkable
+public interface IWalkable
+{
+    void Walk();
+}
+
+// Interfejs ISwimmable
+public interface ISwimmable
+{
+    void Swim();
+}
+
+// Klasa abstrakcyjna Animal
+public abstract class Animal
+{
+    public abstract void Move();
+    public abstract void Sound();
+}
+
+// Klasa abstrakcyjna Mammal dziedzicząca po Animal
+public abstract class Mammal : Animal
+{
+    public void ProduceMilk()
+    {
+        Console.WriteLine("Producing milk...");
+    }
+}
+
+// Klasa Cat dziedzicząca po Mammal i implementująca IWalkable
+public class Cat : Mammal, IWalkable
+{
+    public override void Move()
+    {
+        Console.WriteLine("Walking like a cat...");
+    }
+
+    public override void Sound()
+    {
+        Console.WriteLine("Meow");
+    }
+
+    public void ThrowOffTheTable()
+    {
+        Console.WriteLine("Cat has thrown something off the table!");
+    }
+
+    public void Walk()
+    {
+        Console.WriteLine("I like walking on furniture and tables.");
+    }
+
+    public override string ToString()
+    {
+        return "I'm a Cat, I do Meow";
+    }
+}
+
+// Klasa Dog dziedzicząca po Mammal i implementująca ISwimmable
+public class Dog : Mammal, ISwimmable
+{
+    public override void Move()
+    {
+        Console.WriteLine("Walking like a dog...");
+    }
+
+    public override void Sound()
+    {
+        Console.WriteLine("Woof");
+    }
+
+    public void Swim()
+    {
+        Console.WriteLine("I swim poorly...");
+    }
+
+    public override string ToString()
+    {
+        return "I'm a Dog, I do Woof";
+    }
+}
+
+// Klasa Salmon implementująca ISwimmable
+public class Salmon : Animal, ISwimmable
+{
+    public override void Move()
+    {
+        Console.WriteLine("Swimming like a salmon...");
+    }
+
+    public override void Sound()
+    {
+        Console.WriteLine("Glub");
+    }
+
+    public void Swim()
+    {
+        Console.WriteLine("I can swim really fast!");
+    }
+
+    public override string ToString()
+    {
+        return "I'm a Salmon, I do Glub";
+    }
+}
+
+// Program główny
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Zadanie 1
+        Console.WriteLine("Zadanie 1:");
+        ExecuteTask1();
+
+        // Zadanie 2
+        Console.WriteLine("\nZadanie 2:");
+        ExecuteTask2();
+
+        // Zadanie 3
+        Console.WriteLine("\nZadanie 3:");
+        ExecuteTask3();
+
+        // Zadanie 4
+        Console.WriteLine("\nZadanie 4:");
+        ExecuteTask4();
+
+        // Zadanie 5
+        Console.WriteLine("\nZadanie 5:");
+        ExecuteTask5();
+
+        // Zadanie 6
+        Console.WriteLine("\nZadanie 6:");
+        ExecuteTask6();
+
+    }
+
+    static void ExecuteTask1()
+    {
+        Cat cat = new Cat();
+        cat.Move();
+        cat.Sound();
+        cat.ThrowOffTheTable();
+    }
+
+    static void ExecuteTask2()
+    {
+        Cat cat = new Cat();
+        Dog dog = new Dog();
+
+        cat.Move();
+        cat.Sound();
+        cat.ProduceMilk();
+        cat.ThrowOffTheTable();
+
+        dog.Move();
+        dog.Sound();
+        dog.ProduceMilk();
+    }
+
+    static void ExecuteTask3()
+    {
+        Cat cat = new Cat();
+        cat.Walk();
+    }
+
+    static void ExecuteTask4()
+    {
+        Dog dog = new Dog();
+        Salmon salmon = new Salmon();
+
+        dog.Swim();
+        salmon.Swim();
+    }
+
+    static void ExecuteTask5()
+    {
+        Animal[] animals = { new Cat(), new Dog(), new Salmon() };
+
+        foreach (var animal in animals)
+        {
+            if (animal is Mammal mammal)
+            {
+                mammal.ProduceMilk();
+            }
+
+            if (animal is ISwimmable swimmable)
+            {
+                swimmable.Swim();
+            }
+        }
+    }
+
+    static void ExecuteTask6()
+    {
+        Cat cat = new Cat();
+        Dog dog = new Dog();
+        Salmon salmon = new Salmon();
+
+        Console.WriteLine(cat.ToString());
+        Console.WriteLine(dog.ToString());
+        Console.WriteLine(salmon.ToString());
+    }
+}

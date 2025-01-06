@@ -1,0 +1,434 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    /* przykład */ 
+    
+    public static void PrintMessage(int n)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine("Witaj");
+        }
+    }
+
+    /* koniec przykładu */ 
+
+    //----------------------------------------------------
+
+    /* zadanie 9 */ 
+    static void PrintUpperCase(string upperCaseString)
+    {
+        string textToUpper = upperCaseString.ToUpper();
+        Console.WriteLine(textToUpper);
+    }
+
+    /* koniec zadania 9 */
+
+    //----------------------------------------------------
+
+    /* zadanie 10 */
+
+    public static void ZbudujMacierz(int rows, int columns)
+    {
+        char[,] matrix = new char[rows, columns];
+
+        for (int i = 0; i < rows;  i++)
+        {
+            for(int j = 0; j < columns; j++)
+            {
+                matrix[i, j] = '$';
+            }
+        }
+
+        for (int i = 0; i < rows; i ++)
+        {
+            for (int j = 0; j < columns; ++j)
+            {
+                Console.Write(matrix[i,j] + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+
+    /* koniec zadania 10 */
+
+    //----------------------------------------------------
+
+    /* zadanie 11 */
+
+    public static void CzyParzysta(int liczba)
+    {
+        string liczbaNaTekst = liczba.ToString();
+        if (liczba % 2 == 0)
+        {
+            Console.WriteLine("Even");
+        }
+        else
+        {
+            Console.WriteLine("Odd");
+        }
+    }
+
+    /* koniec zadania 11 */
+
+    //----------------------------------------------------
+
+    /* zadanie 12 */
+
+    static (int, int) WczytajZKlawiatury(int iloscLiczbDoWczytania)
+    {
+        int[] liczby = new int[iloscLiczbDoWczytania];
+        for (int i = 0; i < iloscLiczbDoWczytania; i++)
+        {
+            Console.Write("Podaj liczbę: ");
+            liczby[i] = int.Parse(Console.ReadLine());
+        }
+        return (liczby[0], liczby[1]);
+    }
+  
+    static char[,] WypelnijTablice(int m, int n)
+    {
+        char[,] tablica1 = new char[m, n];
+
+        for (int i = 0; i < m; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                if (i == 0 || i == m - 1 || j == 0 || j == n - 1)
+                {
+                    tablica1[i, j] = '#';
+                }
+                else
+                {
+                    tablica1[i, j] = ' ';
+                }
+            }
+        }
+
+        return tablica1;
+    }
+
+    static void WyswietlTabliceNaEkran(char[,] tablica1)
+    {
+        int m = tablica1.GetLength(0);
+        int n = tablica1.GetLength(1);
+
+        for (int i = 0; i < m; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                Console.Write(tablica1[i, j]);
+            }
+            Console.WriteLine();
+        }
+    }
+
+    /* koniec zadania 12 */
+
+    //----------------------------------------------------
+
+    /* zadnaie 13 */
+    static double[] RozwiazRownanieKwadratowe(double a, double b, double c)
+    {
+        double delta = b * b - 4 * a * c;
+
+        double[] rozwiazania;
+
+        if (delta > 0)
+        {
+            double x4 = (-b + Math.Sqrt(delta)) / (2 * a);
+            double x5 = (-b - Math.Sqrt(delta)) / (2 * a);
+            rozwiazania = new double[] { x4, x5 };
+        }
+        else if (delta == 0)
+        {
+            double x0 = -b / (2 * a);
+            rozwiazania = new double[] { x0 };
+        }
+        else
+        {
+            rozwiazania = new double[] { };
+        }
+
+        return rozwiazania;
+    }
+
+    /* koniec zadania 13 */
+
+
+    static void Main()
+    {
+        Console.WriteLine("-----------------------PRZYKŁAD----------------------------");
+        Console.WriteLine();
+
+        int n = 0;
+        do
+        {
+            Console.Write(n);
+            n++;
+        } while (n < 5);
+        Console.WriteLine();
+        Console.WriteLine(n);
+
+        Console.WriteLine();
+        Console.WriteLine("-----------------------ZADANIE 1---------------------------");
+        Console.WriteLine();
+
+        /* zadanie 1 */
+
+        int x = 10;
+        do
+        {
+            Console.WriteLine(x);
+            x--;
+        } while (x > -1);
+        Console.WriteLine(x);
+
+        /* koniec zadania 1 */
+
+        Console.WriteLine();
+        Console.WriteLine("-----------------------ZADANIE 2---------------------------");
+        Console.WriteLine();
+
+        /* zadanie 2 */
+
+        //string haslo;
+        //do
+        //{
+        //    Console.Write("Wprowadź proszę hasło: ");
+        //    haslo = Console.ReadLine();
+        //} while (haslo != "koniec");
+        //Console.WriteLine("Koniec programu...");
+
+        /* koniec zadania 2 */
+
+        Console.WriteLine();
+        Console.WriteLine("-----------------------PRZYKŁAD----------------------------");
+        Console.WriteLine();
+
+        /* Przykład */
+
+        int y = 0;
+        while (y < 5)
+        {
+            Console.Write(y);
+            y++;
+        }
+        Console.WriteLine();
+        Console.WriteLine(y);
+
+        /* Koniec przykładu */
+
+        Console.WriteLine();
+        Console.WriteLine("-----------------------ZADANIE 3---------------------------");
+        Console.WriteLine();
+
+        /* zadanie 3 */
+
+        int z = 0;
+        while (z < 101)
+        {
+            if (z % 2 == 0)
+            {
+                Console.WriteLine(z);
+            }
+            z += 2;
+        }
+
+        /* koniec zadania 3 */
+
+        Console.WriteLine();
+        Console.WriteLine("-----------------------ZADANIE 4---------------------------");
+        Console.WriteLine();
+
+        /* zadanie 4 */
+
+        for (int i = 0; i <= 15; i++)
+        {
+            Console.WriteLine(i * i);
+        }
+
+        /* koniec zadania 4 */
+
+        Console.WriteLine();
+        Console.WriteLine("-----------------------PRZYKŁAD----------------------------");
+        Console.WriteLine();
+
+        /* przykład */
+
+        List<int> fibNumbers = new List<int>() { 0, 1, 1, 2, 3, 5, 8, 13 };
+        foreach (int i in fibNumbers)
+        {
+            Console.WriteLine($"{i} ");
+        }
+
+        /* koniec przykładu */
+
+        Console.WriteLine();
+        Console.WriteLine("-----------------------ZADANIE 5---------------------------");
+        Console.WriteLine();
+
+        /* zadanie 5 */
+
+        List<int> numbers = new List<int>() { 4, 25, 35, 42, 55, 78, 99, 101 };
+        foreach (int number in numbers)
+        {
+            if (number % 7 == 0)
+            {
+                Console.WriteLine(number);
+            }
+        }
+
+        /* koniec zadania 5 */
+
+        Console.WriteLine();
+        Console.WriteLine("-----------------------ZADANIE 6---------------------------");
+        Console.WriteLine();
+
+        /* zadanie 6 */
+
+        List<int> number1 = new List<int>() { 4, 25, 35, 42, 55, 78, 99, 101 };
+        foreach (int number in number1)
+        {
+            if (number % 7 == 0)
+            {
+                Console.WriteLine(number);
+                break;
+            }
+        }
+
+        /* koniec zadania 6 */
+
+        Console.WriteLine();
+        Console.WriteLine("-----------------------ZADANIE 7---------------------------");
+        Console.WriteLine();
+
+        /* zadanie 7 */
+
+        double[] tablica = new double[20];
+        for (int i = 0; i < tablica.Length; i++)
+        {
+            Console.WriteLine(Math.Sqrt(i));
+        }
+
+        /* koniec zadania 7 */
+
+        Console.WriteLine();
+        Console.WriteLine("-----------------------ZADANIE 8---------------------------");
+        Console.WriteLine();
+
+        /* zadanie 8 */
+
+        int[,] matrix = new int[3, 4]
+        {
+            { 1, 2, 3, 4},
+            { 5, 6, 7, 8},
+            { 9, 10, 11, 12}
+        };
+
+        int columns = matrix.GetLength(0);
+        int rows = matrix.GetLength(1);
+
+        Console.WriteLine("Macierz po transmutacji: ");
+        Console.WriteLine();
+
+        for (int row = 0; row < rows; row++)
+        {
+            for (int col = 0; col < columns; col++)
+            {
+                Console.Write(matrix[col, row] + " ");
+            }
+            Console.WriteLine();
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("-----------------------PRZYKŁAD----------------------------");
+        Console.WriteLine();
+
+        /* przykład */
+
+        int count = 6;
+        PrintMessage(5);
+        PrintMessage(count);
+
+        /* koniec przykładu */
+
+        /* koniec zadania 8 */
+
+        Console.WriteLine();
+        Console.WriteLine("-----------------------ZADANIE 9---------------------------");
+        Console.WriteLine();
+
+        /* zadanie 9 */
+
+        string text = "Oto nasz tekst";
+        PrintUpperCase(text);
+
+        /* koniec zadania 9 */
+
+        Console.WriteLine();
+        Console.WriteLine("-----------------------ZADANIE 10--------------------------");
+        Console.WriteLine();
+
+        /* zadanie 10 */
+
+        int x2 = 3;
+        int y2 = 4;
+        ZbudujMacierz(x2, y2);
+
+        /* koniec zadania 10 */
+
+        Console.WriteLine();
+        Console.WriteLine("-----------------------ZADANIE 11--------------------------");
+        Console.WriteLine();
+
+        /* zadanie 11*/
+
+        CzyParzysta(1);
+        CzyParzysta(2);
+
+        /* koniec zadania 11*/
+
+        Console.WriteLine();
+        Console.WriteLine("-----------------------ZADANIE 12--------------------------");
+        Console.WriteLine();
+
+        /* zadanie 12 */
+
+        (int m1, int n1) = WczytajZKlawiatury(2);
+        char[,] tablica1 = WypelnijTablice(m1, n1);
+        WyswietlTabliceNaEkran(tablica1);
+
+        /* koniec zadania 12 */
+
+        Console.WriteLine();
+        Console.WriteLine("-----------------------ZADANIE 12--------------------------");
+        Console.WriteLine();
+
+        /* zadanie 13 - zadanie domowe */
+
+        double a = 1;
+        double b = -3;
+        double c = 2;
+
+        double[] rozwiazania = RozwiazRownanieKwadratowe(a, b, c);
+
+        if (rozwiazania.Length == 0)
+        {
+            Console.WriteLine("Równanie nie ma rozwiązań rzeczywistych.");
+        }
+        else
+        {
+            Console.WriteLine("Rozwiązania równania kwadratowego:");
+            foreach (double rozw in rozwiazania)
+            {
+                Console.WriteLine($"x = {rozw}");
+            }
+        }
+
+        /* koniec zadania 13 - zadanie domowe */
+
+    }
+}

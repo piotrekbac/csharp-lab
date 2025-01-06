@@ -1,0 +1,14 @@
+string message = "";
+message += "Hello";
+message += ",";
+message += " ";
+message += "World!";
+Console.WriteLine(message);
+
+Console.WriteLine("Przejści do\nnowej linii.");
+Console.WriteLine("Tabulacja\tpozioma.");
+Console.WriteLine("Tabulacja\npionowa.");
+Console.WriteLine("Alarm!\a");
+Console.WriteLine("Pojedyńczy apostrof: \'");
+Console.WriteLine("Pojedyńczy cudzysłow: \"");
+Console.WriteLine("Znak pusty: \0");

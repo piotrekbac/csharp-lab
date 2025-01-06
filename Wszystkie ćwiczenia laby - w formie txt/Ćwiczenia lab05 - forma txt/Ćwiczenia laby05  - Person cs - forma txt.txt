@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+﻿namespace ConsoleApp1
+{
+    // class declaration
+    public class Person
+    {
+        // constructor
+        public Person(string firstName, string lastName, DateTime birthDate)
+        {
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.BirthDate = birthDate;
+            
+        }
+
+        // properties
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public DateTime BirthDate { get; set; }
+        public string EmailAddress { get; set; }
+
+        // method
+        public string GetFullName()
+        {
+            return $"{FirstName} {LastName}";
+        }
+
+        public int GetAge()
+        {
+            var age = DateTime.Now.Year - BirthDate.Year;
+            if (DateTime.Now.DayOfYear < BirthDate.DayOfYear)
+                age--;
+            return age;
+        }
+
+        public bool IsAdult()
+        {
+            return (GetAge() >= 18);
+        }
+
+    }
+}

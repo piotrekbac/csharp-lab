@@ -1,0 +1,223 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+// Interfejs IMessage
+public interface IMessage
+{
+    string Content { get; set; }
+}
+
+// Klasa Letter implementująca IMessage
+public class Letter : IMessage
+{
+    public string Content { get; set; }
+}
+
+// Klasa Email implementująca IMessage
+public class Email : IMessage
+{
+    public string Content { get; set; }
+}
+
+// Klasa SMS implementująca IMessage
+public class SMS : IMessage
+{
+    public string Content { get; set; }
+}
+
+// Klasa generyczna Messenger
+public class Messenger<T> where T : IMessage
+{
+    public void Send(T message)
+    {
+        Console.WriteLine($"Sending {typeof(T).Name}: {message.Content}");
+    }
+}
+
+// Klasa Book
+public class Book
+{
+    public string Title { get; set; }
+    public string Author { get; set; }
+    public int Year { get; set; }
+}
+
+// Program główny
+class Program
+{
+    static List<Book> books = new List<Book>();
+
+    static void Main(string[] args)
+    {
+        // Zadanie 1
+        Console.WriteLine("Zadanie 1:");
+        ExecuteTask1();
+
+        // Zadanie 2
+        Console.WriteLine("\nZadanie 2:");
+        ExecuteTask2();
+
+        // Zadanie 3
+        Console.WriteLine("\nZadanie 3:");
+        ExecuteTask3();
+
+        // Zadanie 4
+        Console.WriteLine("\nZadanie 4:");
+        ExecuteTask4();
+    }
+
+    static void ExecuteTask1()
+    {
+        Messenger<Letter> letterMessenger = new Messenger<Letter>();
+        letterMessenger.Send(new Letter { Content = "Secret content of the letter." });
+
+        Messenger<Email> emailMessenger = new Messenger<Email>();
+        emailMessenger.Send(new Email { Content = "Email content goes here." });
+
+        Messenger<SMS> smsMessenger = new Messenger<SMS>();
+        smsMessenger.Send(new SMS { Content = "SMS content goes here." });
+    }
+
+    static void ExecuteTask2()
+    {
+        IEnumerable<string> enumerable = new string[] { "apple", "banana", "cherry" };
+
+        foreach (var item in enumerable)
+        {
+            Console.WriteLine(item);
+        }
+    }
+
+    static void ExecuteTask3()
+    {
+        ICollection<string> collection = new List<string> { "apple", "banana", "cherry" };
+
+        collection.Add("date");
+        collection.Remove("banana");
+
+        Console.WriteLine("Zawartość kolekcji:");
+        foreach (var item in collection)
+        {
+            Console.WriteLine(item);
+        }
+
+        Console.WriteLine($"Czy kolekcja zawiera 'apple'? {collection.Contains("apple")}");
+    }
+
+    static void ExecuteTask4()
+    {
+        while (true)
+        {
+            Console.WriteLine("1. Dodaj książkę");
+            Console.WriteLine("2. Wyświetl wszystkie książki");
+            Console.WriteLine("3. Wyszukaj książki");
+            Console.WriteLine("Q. Koniec");
+
+            string command = Console.ReadLine();
+
+            switch (command.ToUpper())
+            {
+                case "1":
+                    AddBook();
+                    break;
+                case "2":
+                    DisplayBooks();
+                    break;
+                case "3":
+                    SearchBooks();
+                    break;
+                case "Q":
+                    return;
+                default:
+                    Console.WriteLine("Nieznana komenda.");
+                    break;
+            }
+        }
+    }
+
+    static void AddBook()
+    {
+        Console.Write("Podaj tytuł książki: ");
+        string title = Console.ReadLine();
+
+        Console.Write("Podaj autora książki: ");
+        string author = Console.ReadLine();
+
+        Console.Write("Podaj rok wydania książki: ");
+        int year = int.Parse(Console.ReadLine());
+
+        books.Add(new Book { Title = title, Author = author, Year = year });
+        Console.WriteLine("Książka dodana.");
+    }
+
+    static void DisplayBooks()
+    {
+        Console.WriteLine("Sortować po: (1) Tytule, (2) Autorze, (3) Roku wydania?");
+        string sortOption = Console.ReadLine();
+
+        IEnumerable<Book> sortedBooks = books;
+
+        switch (sortOption)
+        {
+            case "1":
+                sortedBooks = books.OrderBy(b => b.Title);
+                break;
+            case "2":
+                sortedBooks = books.OrderBy(b => b.Author);
+                break;
+            case "3":
+                sortedBooks = books.OrderBy(b => b.Year);
+                break;
+            default:
+                Console.WriteLine("Nieznana opcja sortowania.");
+                return;
+        }
+
+        foreach (var book in sortedBooks)
+        {
+            Console.WriteLine($"Tytuł: {book.Title}, Autor: {book.Author}, Rok: {book.Year}");
+        }
+    }
+
+    static void SearchBooks()
+    {
+        Console.WriteLine("Szukaj po: (1) Tytule, (2) Autorze, (3) Roku wydania?");
+        string searchOption = Console.ReadLine();
+
+        Console.Write("Podaj frazę do wyszukania: ");
+        string query = Console.ReadLine();
+
+        IEnumerable<Book> foundBooks = books;
+
+        switch (searchOption)
+        {
+            case "1":
+                foundBooks = books.Where(b => b.Title.Contains(query, StringComparison.OrdinalIgnoreCase));
+                break;
+            case "2":
+                foundBooks = books.Where(b => b.Author.Contains(query, StringComparison.OrdinalIgnoreCase));
+                break;
+            case "3":
+                int year;
+                if (int.TryParse(query, out year))
+                {
+                    foundBooks = books.Where(b => b.Year == year);
+                }
+                else
+                {
+                    Console.WriteLine("Nieprawidłowy rok.");
+                    return;
+                }
+                break;
+            default:
+                Console.WriteLine("Nieznana opcja wyszukiwania.");
+                return;
+        }
+
+        foreach (var book in foundBooks)
+        {
+            Console.WriteLine($"Tytuł: {book.Title}, Autor: {book.Author}, Rok: {book.Year}");
+        }
+    }
+}
