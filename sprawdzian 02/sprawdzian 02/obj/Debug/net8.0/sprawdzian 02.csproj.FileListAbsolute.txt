@@ -1,0 +1,4 @@
+D:\Users\piotr.bacior\Desktop\sprawdzian 02 Bacior Piotr 15 722\sprawdzian 02\sprawdzian 02\obj\Debug\net8.0\sprawdzian 02.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\piotr.bacior\Desktop\sprawdzian 02 Bacior Piotr 15 722\sprawdzian 02\sprawdzian 02\obj\Debug\net8.0\sprawdzian 02.AssemblyInfoInputs.cache
+D:\Users\piotr.bacior\Desktop\sprawdzian 02 Bacior Piotr 15 722\sprawdzian 02\sprawdzian 02\obj\Debug\net8.0\sprawdzian 02.AssemblyInfo.cs
+D:\Users\piotr.bacior\Desktop\sprawdzian 02 Bacior Piotr 15 722\sprawdzian 02\sprawdzian 02\obj\Debug\net8.0\sprawdzian 02.csproj.CoreCompileInputs.cache
